@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ArticlesActivity"
+        android:orientation="vertical"
+        android:gravity="top|center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/Article_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="placeholder title"
+                android:textSize="40sp"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Article_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="placeholder content"
+            android:padding="15dp"
+            android:justificationMode="inter_word"
+            />
+
+
+        <ImageView
+            android:id="@+id/imagePlayPause"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="*"
+                android:textColor="@color/gray"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="*"
+                android:textColor="@color/gray"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="*"
+                android:textColor="@color/gray"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="*"
+                android:textColor="@color/gray"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="*"
+                android:textColor="@color/gray"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</ScrollView>

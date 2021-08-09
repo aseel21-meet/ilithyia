@@ -4,18 +4,35 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/applogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/applogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ilithyia">
-        <activity android:name=".MainActivity">
+        <activity android:name=".sex101GameActivity"></activity>
+        <activity android:name=".AnswerPopUp" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".MaleAnatomyGameActivity" />
+        <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoggedInPro" />
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".vaginalDischarge1Activity" />
+        <activity android:name=".SecondVImageActivity" />
+        <activity android:name=".FemaleAnatomyQuizActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ProActivity" />
+        <activity android:name=".QandAActivity" />
+        <activity android:name=".LibraryActivity" />
+        <activity android:name=".DiscoverActivity" />
+        <activity android:name=".aboutUs" />
+        <activity android:name=".ArticlesActivity" />
     </application>
 
 </manifest>

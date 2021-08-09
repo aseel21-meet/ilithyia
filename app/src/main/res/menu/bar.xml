@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeI"
+        android:icon="@drawable/homeicon"
+        android:title=" "
+        app:showAsAction="ifRoom"
+        >
+
+
+    </item>
+
+
+    <item
+        android:id="@+id/settingsI"
+        android:icon="@drawable/button"
+        android:iconTint="@color/textColor"
+        android:title="Profile">
+
+
+    </item>
+
+
+            <item
+                android:id="@+id/proI"
+                android:title="Professionals">
+
+
+            </item>
+    <item
+        android:id="@+id/qnaI"
+        android:iconTint="@color/textColor"
+        android:title="Q and A">
+
+
+    </item>
+    <item
+        android:id="@+id/aboutUsI"
+        android:title="About us">
+
+    </item>
+    <item
+        android:id="@+id/logoutI"
+        android:title="Log-out">
+
+    </item>
+</menu>

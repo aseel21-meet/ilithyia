@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ilithyia</string>
+    <string-array name="myArticles">
+        <item>Female Puberty</item>
+        <item>Male Puberty</item>
+        <item>Contraceptives 101</item>
+    </string-array>
 </resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|top"
+            android:text="ilithyia"
+            android:textSize="40sp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <TextView
+            android:id="@+id/us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="who are we?"
+            android:textColor="@color/textColor"
+            android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/usText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="We support teen health through a discreet, engaging, and multilingual sex education app that brings professionally sourced information to all." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_corner"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/missionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="mission"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/mission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="To provide teenagers with a reliable sex education with professionally sourced information"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_corners_pink"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/visionTitle"
+                android:layout_width="397dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="vision"
+                android:textColor="@color/textColor"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:id="@+id/vision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="We aim for teenagers to be able to make decisions about their bodies while being fully informed of the effects and consequences."
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/layout_corner">
+
+        <TextView
+            android:id="@+id/uvpTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="what makes us unique"
+            android:textColor="@color/pinkI"
+            android:textSize="30sp" />
+
+
+            <TextView
+                android:id="@+id/uvp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="By teenagers for teenagers. but what does that mean? all those questions you're scared to ask, we will ask them for you. Tired of long scientific articles, we got you covered with short, fun understandable articles with a meme at the end.  and of course, dont forget the interactive articles and games to help you learn." />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/layout_corners_pink">
+
+            <TextView
+                android:id="@+id/teamTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Team"
+                android:textColor="@color/textColor"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
