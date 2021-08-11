@@ -76,6 +76,8 @@ QandAActivity extends AppCompatActivity implements View.OnClickListener {
                 sendTo=sendTob.getText().toString();
                 message= new Message(email, sendTo, msg);
                 root.push().setValue(message);
+                msgb.setText("");
+                sendTob.setText("");
 
 
 
@@ -91,7 +93,7 @@ QandAActivity extends AppCompatActivity implements View.OnClickListener {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot data:snapshot.getChildren()){
                     Message message = data.getValue(Message.class);
-                    Toast.makeText(QandAActivity.this,message.toString(),Toast.LENGTH_LONG).show();
+
                     if(message.getIsPublished()==true)
                     {
 
@@ -151,6 +153,10 @@ QandAActivity extends AppCompatActivity implements View.OnClickListener {
         }
         else if(id == R.id.homeI){
             Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
+        else if(id== R.id.discoverI){
+            Intent intent = new Intent(this,DiscoverActivity.class);
             startActivity(intent);
         }
         return true;

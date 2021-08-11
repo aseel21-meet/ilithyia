@@ -104,6 +104,10 @@ public class SecondVImageActivity extends AppCompatActivity implements View.OnCl
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
         }
+        else if(id== R.id.discoverI){
+            Intent intent = new Intent(this,DiscoverActivity.class);
+            startActivity(intent);
+        }
         return true;
     }
     //create dialog

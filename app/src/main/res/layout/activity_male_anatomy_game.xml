@@ -26,8 +26,10 @@
                 android:layout_height="68dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="100dp"
+                android:fontFamily="@font/kaushan_script"
                 android:gravity="top"
                 android:text="Male anatomy 101"
+                android:textColor="@color/gray"
                 android:textSize="40sp" />
 
 
@@ -36,16 +38,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/open_sans_semibold"
                 android:gravity="center"
-                android:text="Interactive article" />
+                android:text="Interactive article"
+                android:textColor="@color/gray" />
 
             <TextView
                 android:id="@+id/instructions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
+                android:fontFamily="@font/open_sans_semibold"
                 android:gravity="center"
-                android:text="Reproductive Anatomy is a subject that has been studied for thousands of years, by amatuer doctors to the greatest thinkers of the classic and modern era. Now it's time for us to learn a little bit.  In your reproductive system, you have external parts and internal parts. Let's start with the easiest - the external part. " />
+                android:text="Reproductive Anatomy is a subject that has been studied for thousands of years, by amatuer doctors to the greatest thinkers of the classic and modern era. Now it's time for us to learn a little bit.  In your reproductive system, you have external parts and internal parts. Let's start with the easiest - the external part. "
+                android:textColor="@color/gray" />
 
             <ImageView
                 android:id="@+id/imageView2"

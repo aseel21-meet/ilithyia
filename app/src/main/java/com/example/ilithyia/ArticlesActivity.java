@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -26,12 +27,42 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
     private String title;
     private Bundle extras;
     private ImageView imagePlayPause;
+    private ImageView Meme;
+    private MediaPlayer mediaPlayer;
     private FirebaseDatabase db=FirebaseDatabase.getInstance("https://ilithy-64c52-default-rtdb.europe-west1.firebasedatabase.app/");
     private DatabaseReference root=db.getReference().child("evaluations");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_articles);
+        Bundle extras = getIntent().getExtras();
+        if (extras.getString("article_title").equals("Male Puberty")){
+            mediaPlayer = MediaPlayer.create(this,R.raw.malepuberty);
+        }
+        if (extras.getString("article_title").equals("Female Puberty")){
+            mediaPlayer = MediaPlayer.create(this,R.raw.femalepuberty);
+        }
+        if (extras.getString("article_title").equals("Contraceptives")){
+            mediaPlayer = MediaPlayer.create(this,R.raw.contraceptives);
+        }
+        if (extras.getString("article_title").equals("consent")){
+            mediaPlayer = MediaPlayer.create(this,R.raw.consent);
+        }
+
+        imagePlayPause = findViewById(R.id.imagePlayPause);
+        imagePlayPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(mediaPlayer.isPlaying()){
+                    mediaPlayer.pause();
+                    imagePlayPause.setImageResource(R.drawable.ic_play);
+                }else{
+                    mediaPlayer.start();
+                    imagePlayPause.setImageResource(R.drawable.ic_pause);
+                }
+            }
+        });
+        prepareMediaPlayer();
         Article a1=new Article("Male Puberty",
                 "Around the age of eleven to fourteen, you might start to feel some changes happening to you, emotionally and physically. And that's okay!\n" +
                 "This process is called Puberty, and the cause of these changes is hormones, and specifically one called “testosterone”. \n" +
@@ -192,40 +223,42 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
                 "shorturl.at/hzMP7\n",null);
 
         articles=new Article[]{a1,a2,a3,a4,a5,a6};
-        imagePlayPause=findViewById(R.id.imagePlayPause);
+        Meme=findViewById(R.id.Meme);
         extras = getIntent().getExtras();
         if (extras.getString("article_title").equals("Male Puberty")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
             tTextView.setText(articles[0].getTitle());
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[0].getText());
-            imagePlayPause.setImageResource(R.mipmap.male_puberty_img_foreground);
+            Meme.setImageResource(R.mipmap.male_puberty_img_foreground);
         }
         if (extras.getString("article_title").equals("Female Puberty")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
             tTextView.setText(articles[1].getTitle());
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[1].getText());
-            imagePlayPause.setImageResource(R.mipmap.female_puberty_img_foreground);
+            Meme.setImageResource(R.mipmap.female_puberty_img_foreground);
         }
         if (extras.getString("article_title").equals("Contraceptives")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
             tTextView.setText(articles[2].getTitle());
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[2].getText());
-            imagePlayPause.setImageResource(R.mipmap.contraceptives_img_foreground);
+            Meme.setImageResource(R.mipmap.contraceptives_img_foreground);
         }
         if (extras.getString("article_title").equals("consent")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
             tTextView.setText(articles[3].getTitle());
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[3].getText());
+
         }
         if (extras.getString("article_title").equals("STD vs. STI")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
             tTextView.setText(articles[4].getTitle());
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[4].getText());
+            Meme.setImageResource(R.mipmap.std_meme_foreground);
 
         }
         if (extras.getString("article_title").equals("PMS")){
@@ -233,6 +266,7 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
             tTextView.setText(articles[5].getTitle());
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[5].getText());
+            Meme.setImageResource(R.mipmap.pms_meme_foreground);
         }
 
 
@@ -248,10 +282,18 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
         stav5=findViewById(R.id.star5);
         stav5.setOnClickListener(this);
         score=0;
-        title="";
+
 
     }
-
+    private void prepareMediaPlayer(){
+        Bundle extras = getIntent().getExtras();
+        try {
+            mediaPlayer.setDataSource(extras.getString("audioUrl"));
+            mediaPlayer.prepare();
+        }catch (Exception exception){
+            Toast.makeText(this,exception.getMessage(),Toast.LENGTH_SHORT).show();
+        }
+    }
 
     //
 
@@ -297,7 +339,7 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
         stav3.setEnabled(false);
         stav4.setEnabled(false);
         stav5.setEnabled(false);
-        title=extras.getString("article_title");
+        title=extras.getString("article_title")+"";
         Rating rate=new Rating(title,score);
         root.push().setValue(rate);
 
@@ -339,6 +381,10 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
         }
         else if(id == R.id.homeI){
             Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
+        else if(id== R.id.discoverI){
+            Intent intent = new Intent(this,DiscoverActivity.class);
             startActivity(intent);
         }
         return true;

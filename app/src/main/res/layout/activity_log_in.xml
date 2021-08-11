@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:background="@color/white"
         android:gravity="center"
@@ -21,39 +21,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="6dp"
-            android:gravity="center"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/kaushan_script"
+            android:gravity="center|top"
             android:text="Log-in "
-            android:textColor="@color/textColor" />
+            android:textColor="@color/gray"
+            android:textSize="48sp" />
 
         <EditText
             android:id="@+id/emailedit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:background="@color/blueI"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:height="50dp"
+            android:background="@drawable/button1"
             android:ems="10"
+            android:fontFamily="@font/open_sans"
             android:hint="email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textSize="20sp" />
 
 
         <EditText
             android:id="@+id/passwordedit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:background="@color/blueI"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:height="40dp"
+            android:background="@drawable/button1"
             android:ems="10"
+            android:fontFamily="@font/open_sans"
             android:hint="password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/submitbtn"
-            android:layout_width="match_parent"
+            android:layout_width="275dp"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:backgroundTint="@color/gray"
+            android:fontFamily="@font/open_sans"
+            android:text="Login"
             android:textColor="@color/textColor"
-            android:text="Login" />
+            android:textSize="25sp"
+            app:cornerRadius="14dp" />
 
 
     </LinearLayout>

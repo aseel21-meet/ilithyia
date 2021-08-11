@@ -16,32 +16,55 @@
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/Article_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center"
                 android:text="placeholder title"
-                android:textSize="40sp"
-                />
+                android:textColor="@color/gray"
+                android:textSize="40sp" />
 
 
         </LinearLayout>
+        <ImageView
+            android:layout_margin="50dp"
+            android:id="@+id/imagePlayPause"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_play"/>
+
 
         <TextView
             android:id="@+id/Article_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_marginTop="10dp"
-            android:text="placeholder content"
-            android:padding="15dp"
+            android:fontFamily="@font/open_sans"
             android:justificationMode="inter_word"
-            />
+            android:padding="15dp"
+            android:text="placeholder content"
+            android:textColor="@color/gray" />
 
 
         <ImageView
-            android:id="@+id/imagePlayPause"
-            android:layout_width="200dp"
-            android:layout_height="200dp"/>
+            android:id="@+id/Meme"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate this article"
+            android:fontFamily="@font/kaushan_script"
+            android:textColor="@color/gray"
+            android:textSize="15sp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"

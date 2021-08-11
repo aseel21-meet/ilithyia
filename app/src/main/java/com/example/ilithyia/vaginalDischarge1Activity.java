@@ -136,9 +136,12 @@ public class vaginalDischarge1Activity extends AppCompatActivity implements View
         }
         else
         {
+
             vdPopup.number=0;
             q1.setText(count+"");
             opt2.setText("");
+            opt1.setEnabled(false);
+            opt2.setEnabled(false);
             opt1.setText("");
         }
 
@@ -187,6 +190,10 @@ public class vaginalDischarge1Activity extends AppCompatActivity implements View
         }
         else if(id == R.id.homeI){
             Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
+        else if(id== R.id.discoverI){
+            Intent intent = new Intent(this,DiscoverActivity.class);
             startActivity(intent);
         }
         return true;

@@ -23,31 +23,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/kaushan_script"
             android:gravity="center|top"
-            android:text="ilithyia"
-            android:textSize="40sp"
 
-            />
+            android:text="ilithyia"
+            android:textColor="@color/gray"
+            android:textSize="40sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
 
-        <TextView
-            android:id="@+id/us"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="who are we?"
-            android:textColor="@color/textColor"
-            android:textSize="30dp" />
+            <TextView
+                android:id="@+id/us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="who are we?"
+                android:textColor="@color/textColor"
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/usText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="15dp"
                 android:layout_weight="1"
-                android:text="We support teen health through a discreet, engaging, and multilingual sex education app that brings professionally sourced information to all." />
+                android:fontFamily="@font/open_sans"
+                android:text="We support teen health through a discreet, engaging, and multilingual sex education app that brings professionally sourced information to all."
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -60,20 +68,23 @@
                 android:id="@+id/missionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="mission"
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/mission"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="15dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/open_sans"
                 android:text="To provide teenagers with a reliable sex education with professionally sourced information"
-                android:textSize="20sp" />
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,11 +97,12 @@
                 android:id="@+id/visionTitle"
                 android:layout_width="397dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/open_sans_semibold"
                 android:text="vision"
                 android:textColor="@color/textColor"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
 
             <TextView
@@ -99,8 +111,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/open_sans"
                 android:text="We aim for teenagers to be able to make decisions about their bodies while being fully informed of the effects and consequences."
-                android:textSize="20sp" />
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,21 +123,26 @@
             android:orientation="vertical"
             android:background="@drawable/layout_corner">
 
-        <TextView
-            android:id="@+id/uvpTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/uvpTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-            android:text="what makes us unique"
-            android:textColor="@color/pinkI"
-            android:textSize="30sp" />
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="what makes us unique"
+                android:textColor="@color/pinkI"
+                android:textSize="25sp" />
 
 
             <TextView
                 android:id="@+id/uvp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="By teenagers for teenagers. but what does that mean? all those questions you're scared to ask, we will ask them for you. Tired of long scientific articles, we got you covered with short, fun understandable articles with a meme at the end.  and of course, dont forget the interactive articles and games to help you learn." />
+                android:layout_margin="10dp"
+                android:text="By teenagers for teenagers. but what does that mean? all those questions you're scared to ask, we will ask them for you. Tired of long scientific articles, we got you covered with short, fun understandable articles with a meme at the end.  and of course, dont forget the interactive articles and games to help you learn."
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,10 +154,11 @@
                 android:id="@+id/teamTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_marginLeft="10dp"
                 android:text="Team"
                 android:textColor="@color/textColor"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
         </LinearLayout>
 
     </LinearLayout>

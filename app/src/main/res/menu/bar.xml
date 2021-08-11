@@ -39,6 +39,15 @@
         android:id="@+id/aboutUsI"
         android:title="About us">
 
+
+    </item>
+
+
+    <item
+        android:id="@+id/discoverI"
+        android:icon="@drawable/button"
+        android:iconTint="@color/textColor"
+        android:title="Discover">
     </item>
     <item
         android:id="@+id/logoutI"

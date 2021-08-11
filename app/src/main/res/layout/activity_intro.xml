@@ -3,34 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:layout_height="wrap_content"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".MainActivity">
+
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@mipmap/logo_foreground"/>
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center|top"
+        android:layout_margin="20dp"
+        android:src="@mipmap/logo_foreground" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/kaushan_script"
         android:text="Welcome!"
-        android:textSize="40sp"/>
+        android:textColor="@color/gray"
+        android:textSize="40sp" />
 
     <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
         android:id="@+id/loginbtn"
-        android:text="Log-in" />
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:height="40dp"
+        android:background="@drawable/circlular"
+        android:fontFamily="@font/open_sans"
+        android:text="Log in" />
 
     <Button
         android:id="@+id/signupbtn"
-        android:layout_width="100dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:text="Sign-up" />
-
+        android:layout_margin="20dp"
+        android:height="40dp"
+        android:background="@drawable/circlular"
+        android:fontFamily="@font/open_sans"
+        android:text="Sign up" />
 
 
 </LinearLayout>

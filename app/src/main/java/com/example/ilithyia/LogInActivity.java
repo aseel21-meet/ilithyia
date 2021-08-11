@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -48,8 +47,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
                         logIn();
                     }
                     else {
-                        Toast.makeText(LogInActivity.this,"failed to log in honey",Toast.LENGTH_LONG);
-                    }
+                                           }
             }
         });
     }

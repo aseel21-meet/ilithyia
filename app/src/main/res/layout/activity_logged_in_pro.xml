@@ -6,30 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="bottom">
+    android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_gravity="top"
-        android:gravity="top">
+        android:layout_gravity="center"
+        android:gravity="center">
         <!--title -->
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/title"
-            android:text="profile"
-            android:textSize="40sp"
             android:layout_gravity="center"
-            android:gravity="top"
             android:layout_marginTop="100dp"
-            />
+            android:fontFamily="@font/kaushan_script"
+            android:gravity="top"
+            android:text="profile"
+            android:textColor="@color/gray"
+            android:textSize="40sp" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/gray"
+                android:text="Questions:"/>
 
         <ListView
             android:id="@+id/lst"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+        </LinearLayout>
 
 
     </LinearLayout>

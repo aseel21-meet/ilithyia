@@ -90,7 +90,7 @@ public class LoggedInPro extends AppCompatActivity implements View.OnClickListen
                     Message message = data.getValue(Message.class);
                     String id=data.getKey()+"";
                     message.setKey(id);
-                    Toast.makeText(LoggedInPro.this,message.toString(),Toast.LENGTH_LONG).show();
+
                     if(user.getEmail().equals(message.getSendTo()) && (message.getIsPublished()==false))
                     {
 
@@ -180,6 +180,10 @@ public class LoggedInPro extends AppCompatActivity implements View.OnClickListen
         else if(id == R.id.homeI)
         {
             Intent intent=new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+        else if(id== R.id.discoverI){
+            Intent intent = new Intent(this,DiscoverActivity.class);
             startActivity(intent);
         }
         return true;

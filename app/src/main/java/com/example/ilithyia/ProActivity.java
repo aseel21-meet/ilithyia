@@ -88,6 +88,10 @@ public class ProActivity extends AppCompatActivity implements View.OnClickListen
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
         }
+        else if(id== R.id.discoverI){
+            Intent intent = new Intent(this,DiscoverActivity.class);
+            startActivity(intent);
+        }
         return true;
     }
 

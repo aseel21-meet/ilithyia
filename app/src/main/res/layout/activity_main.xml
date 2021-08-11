@@ -5,9 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="wrap_content">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -17,246 +15,26 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-            <TextView
+            <SearchView
+                android:id="@+id/homeSearch"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Recommended articles"
-                android:textColor="@color/textColor"
-                android:textSize="30sp" />
-            <!--articles card scroll-->
-            <HorizontalScrollView
+                android:layout_height="50dp"
+                android:background="@drawable/searchbar_bg_rounded"
+                android:layout_margin="20dp"/>
+
+
+
+
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    tools:context=".MainActivity">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card1"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
-                        android:layout_margin="20dp"
-                        android:layout_marginStart="5dp"
-                        android:clickable="true"
-                        android:onClick="onClick"
-                        card_view:cardBackgroundColor="@color/surface2"
-                        card_view:cardCornerRadius="20dp">
-
-                        <TextView
-                            android:id="@+id/card1title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="Contraceptives"
-                            android:textSize="20sp" />
-                        <!--Edited all the Linear layouts to have background images-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/age1text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation: 16+"
-                                android:textSize="11sp" />
-                        </LinearLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card2"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
-                        android:layout_margin="20dp"
-                        card_view:cardBackgroundColor="@color/surface2"
-                        card_view:cardCornerRadius="20dp">
-
-                        <TextView
-                            android:id="@+id/card2title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="Male Puberty"
-                            android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/age2text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation:12"
-                                android:textSize="12dp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card3"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
-                        android:layout_margin="20dp"
-                        card_view:cardBackgroundColor="@color/surface2"
-                        card_view:cardCornerRadius="20dp">
-
-                        <TextView
-                            android:id="@+id/card3title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="Female Puberty"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/age3text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation:12"
-                                android:textSize="12dp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card4"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
-                        android:layout_margin="20dp"
-                        card_view:cardBackgroundColor="@color/surface2"
-                        card_view:cardCornerRadius="20dp">
-
-                        <TextView
-                            android:id="@+id/card4title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="Consent"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"              android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/age4text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation:16"
-                                android:textSize="12dp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card5"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
-                        android:layout_margin="20dp"
-                        card_view:cardBackgroundColor="@color/surface2"
-                        card_view:cardCornerRadius="20dp">
-
-                        <TextView
-                            android:id="@+id/card5title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="STD Vs. STI"
-                            android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/age5text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation:16"
-                                android:textSize="12dp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card11"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
-                        android:layout_margin="20dp"
-                        android:backgroundTint="@color/surface2"
-                        android:clickable="true"
-                        android:onClick="onClick"
-                        card_view:cardBackgroundColor="@color/surface2"
-                        card_view:cardCornerRadius="20dp">
-
-                        <TextView
-                            android:id="@+id/card11title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="PMS"
-                            android:textSize="20sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/age11text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation: 12+"
-                                android:textSize="11sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <TextView
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="Recommended games"
-                android:textColor="@color/textColor"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Games"
+                android:textColor="@color/gray"
                 android:textSize="30sp" />
 
 
@@ -273,115 +51,158 @@
                     tools:context=".MainActivity">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/card6"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
+                        android:id="@+id/card7"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
                         android:layout_margin="20dp"
-                        android:backgroundTint="@color/surface2"
+                        android:layout_marginStart="5dp"
                         android:clickable="true"
                         android:onClick="onClick"
-                        card_view:cardBackgroundColor="@color/surface2"
+                        card_view:cardBackgroundColor="@color/pinkI"
                         card_view:cardCornerRadius="20dp">
 
-                        <TextView
-                            android:id="@+id/card6title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="Female anatomy"
-                             />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/age6text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation: 12+"
-                                android:textSize="11sp" />
-                        </LinearLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/card7"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
-                        android:layout_margin="20dp"
-                        card_view:cardBackgroundColor="@color/surface2"
-                        card_view:cardCornerRadius="20dp">
 
                         <TextView
                             android:id="@+id/card7title"
+                            android:text="Vaginal discharge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="Vaginal discharge"
-   />
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
 
-                        <LinearLayout
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age7text"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"
-                            android:orientation="vertical">
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 12+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
 
-                            <TextView
-                                android:id="@+id/age7text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation:12"
-                                android:textSize="12dp" />
-                        </LinearLayout>
+
                     </androidx.cardview.widget.CardView>
 
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Interactive articles"
+                android:textColor="@color/gray"
+                android:textSize="30sp" />
+
+
+            <!--second scroll -->
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:context=".MainActivity">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card8"
-                        android:layout_width="150dp"
-                        android:layout_height="180dp"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
                         android:layout_margin="20dp"
-                        card_view:cardBackgroundColor="@color/surface2"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/pinkI"
                         card_view:cardCornerRadius="20dp">
+
 
                         <TextView
                             android:id="@+id/card8title"
+                            android:text="Male anatomy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="2dp"
-                            android:text="Male Anatomy game"
-                            android:textSize="20sp" />
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
 
-                        <LinearLayout
+
+                        <TextView
+
+                            android:id="@+id/warning8text"
                             android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:layout_gravity="bottom"
-                            android:background="@mipmap/backimg_foreground"
-                            android:orientation="vertical">
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:text="Warning: graphic content"
+                            android:textColor="@color/gray"
+                            android:textSize="13sp" />
 
-                            <TextView
-                                android:id="@+id/age8text"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom|center"
-                                android:text="Age Recommendation:12"
-                                android:textSize="12dp" />
-                        </LinearLayout>
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age8text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 12+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
+
+
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card13"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/blueI"
+                        card_view:cardCornerRadius="20dp">
 
 
+                        <TextView
+                            android:id="@+id/card13title"
+                            android:text="Sex101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
 
 
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age13text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 16+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
+
+
+                    </androidx.cardview.widget.CardView>
 
 
 
@@ -390,7 +211,260 @@
 
 
 
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Articles"
+                android:textColor="@color/gray"
+                android:textSize="30sp" />
+            <!--articles card scroll-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    tools:context=".MainActivity">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card1"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/blueI"
+                        card_view:cardCornerRadius="20dp">
+
+
+                            <TextView
+                                android:id="@+id/card1title"
+                                android:text="Contraceptives"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/kaushan_script"
+                                android:gravity="center"
+                                android:textColor="@color/gray"
+                                android:textSize="23sp" />
+
+                            <TextView
+                                android:layout_margin="5dp"
+                                android:id="@+id/age1text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom|center"
+                                android:textColor="@color/gray"
+                                android:text="Recommended for 16+"
+                                android:textSize="13sp" />
+                       <!-- </LinearLayout>-->
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card2"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/pinkI"
+                        card_view:cardCornerRadius="20dp">
+
+
+                        <TextView
+                            android:id="@+id/card2title"
+                            android:text="Male puberty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age2text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 12+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card3"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/blueI"
+                        card_view:cardCornerRadius="20dp">
+
+
+                        <TextView
+                            android:id="@+id/card3title"
+                            android:text="Female puberty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age3text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 12+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card4"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/pinkI"
+                        card_view:cardCornerRadius="20dp">
+
+
+                        <TextView
+                            android:id="@+id/card4title"
+                            android:text="Consent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age4text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 12+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card5"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/blueI"
+                        card_view:cardCornerRadius="20dp">
+
+
+                        <TextView
+                            android:id="@+id/card5title"
+                            android:text="STDs and STIs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age5text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 16+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card11"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/pinkI"
+                        card_view:cardCornerRadius="20dp">
+
+
+                        <TextView
+                            android:id="@+id/card11title"
+                            android:text="PMS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age11text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 12+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
         </LinearLayout>
-    </RelativeLayout>
 </ScrollView>
 

@@ -10,11 +10,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private androidx.cardview.widget.CardView card1,card2,card3,card4,card5,card6,card7,card11,card8;
+    private androidx.cardview.widget.CardView card13,card1,card2,card3,card4,card5,card6,card7,card11,card8;
 
+    private SearchView homeSearch;
     private class Article{
         String title;
         String content;
@@ -53,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         card7.setOnClickListener(this);
         card8 = findViewById(R.id.card8);
         card8.setOnClickListener(this);
+        card13=findViewById(R.id.card13);
+        card13.setOnClickListener(this);
+        homeSearch = findViewById(R.id.homeSearch);
+        homeSearch.setOnClickListener(this);
 
     }
     //when items are clicked on
@@ -103,7 +109,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this,MaleAnatomyGameActivity.class);
             startActivity(intent);
         }
-    }
+        else if(view.getId()==R.id.card13)
+        {
+            Intent intent=new Intent(this, sex101GameActivity.class);
+            startActivity(intent);
+        }
+        else if (view.getId() == R.id.homeSearch ){
+            Intent intent = new Intent (this, DiscoverActivity.class);
+            startActivity(intent);
+            }
+        }
     //adds menu to page
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -139,6 +154,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if(id == R.id.homeI){
             Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
+        else if(id== R.id.discoverI){
+            Intent intent = new Intent(this,DiscoverActivity.class);
             startActivity(intent);
         }
 

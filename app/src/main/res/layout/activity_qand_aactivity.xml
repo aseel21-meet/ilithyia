@@ -12,55 +12,88 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginTop="40dp">
             <!--title -->
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:layout_marginTop="100dp"
-                android:gravity="top"
-                android:text="Q and A"
-                android:textColor="@color/textColor"
-                android:textSize="40sp" />
+                android:layout_margin="5dp"
+                android:fontFamily="@font/kaushan_script"
+                android:gravity="center|top"
+                android:text="Q &amp; A "
+                android:textColor="@color/gray"
+                android:textSize="48sp" />
 
 
             <EditText
                 android:id="@+id/sendTob"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="60dp"
+                android:height="40dp"
+                android:background="@drawable/button1"
                 android:ems="10"
-                android:hint="send to "
-                android:inputType="textPersonName" />
+                android:fontFamily="@font/open_sans"
+                android:hint="send to"
+                android:textSize="20sp"
+                android:inputType="textEmailAddress" />
 
 
             <EditText
                 android:id="@+id/msgb"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
+                android:layout_height="40dp"
                 android:layout_margin="10dp"
-                android:inputType="textPersonName"
+                android:height="40dp"
+                android:background="@drawable/button1"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
                 android:hint="Message"
+                android:inputType="text"
+                android:textSize="20sp"
+
                 />
 
             <Button
                 android:id="@+id/submitcbtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="275dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
                 android:backgroundTint="@color/gray"
-                android:text="submit question "
-                android:textColor="@color/textColor" />
+                android:fontFamily="@font/open_sans"
+                android:text="Submit question"
+                android:textColor="@color/textColor"
+                android:textSize="22sp"
+                app:cornerRadius="14dp"  />
 
 
         </LinearLayout>
-    <ListView
-        android:id="@+id/lst"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textColor="@color/gray"
+            android:text="Answered questions:"/>
+        <ListView
+            android:id="@+id/lst"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
 
 
     </LinearLayout>

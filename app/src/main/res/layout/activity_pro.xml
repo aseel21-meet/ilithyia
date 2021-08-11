@@ -17,30 +17,44 @@
 >
         <!--title -->
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/title"
-            android:text="profssionals"
-            android:textColor="@color/textColor"
-            android:textSize="40sp"
             android:layout_gravity="center"
-            android:gravity="top"
             android:layout_marginTop="100dp"
-            />
+            android:fontFamily="@font/kaushan_script"
+            android:gravity="top"
+            android:text="profssionals"
+            android:textColor="@color/gray"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/textView3"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="professionals you can approach " />
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="professionals you can approach "
+            android:textColor="@color/gray" />
 
         <TextView
             android:id="@+id/pro_names"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="go to profesionals logIn" />
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Organization we cooaperate with"
+            android:textSize="20sp"
+            android:textColor="@color/gray" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
+            android:textSize="15sp"
+            android:layout_margin="30dp"
+            android:textColor="@color/gray"
+            android:text="Ladaat \n Open door"/>
 
 
 
