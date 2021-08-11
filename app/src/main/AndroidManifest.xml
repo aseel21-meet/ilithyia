@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/applogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ilithyia">
-        <activity android:name=".sex101GameActivity"></activity>
+        <activity android:name=".Consent"></activity>
+        <activity android:name=".sex101GameActivity" />
         <activity android:name=".AnswerPopUp" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MaleAnatomyGameActivity" />

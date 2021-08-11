@@ -14,7 +14,7 @@ import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private androidx.cardview.widget.CardView card13,card1,card2,card3,card4,card5,card6,card7,card11,card8;
+    private androidx.cardview.widget.CardView card13,card1,card2,card3,card4,card5,card6,card7,card11,card8,card16;
 
     private SearchView homeSearch;
     private class Article{
@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         card8.setOnClickListener(this);
         card13=findViewById(R.id.card13);
         card13.setOnClickListener(this);
+        card16=findViewById(R.id.card16);
+        card16.setOnClickListener(this);
         homeSearch = findViewById(R.id.homeSearch);
         homeSearch.setOnClickListener(this);
 
@@ -112,6 +114,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if(view.getId()==R.id.card13)
         {
             Intent intent=new Intent(this, sex101GameActivity.class);
+            startActivity(intent);
+        }
+        else if(view.getId()==R.id.card16)
+        {
+            Intent intent=new Intent(this, Consent.class);
             startActivity(intent);
         }
         else if (view.getId() == R.id.homeSearch ){
