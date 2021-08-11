@@ -10,10 +10,10 @@ public class Rating {
     {
 
     }
-    public Rating (String title,int  score)
-    {
-        this.title=title;
-        this.score=score;
+
+    public Rating(String title, int score) {
+        this.title = title;
+        this.score = score;
     }
 
     public String getTitle() {

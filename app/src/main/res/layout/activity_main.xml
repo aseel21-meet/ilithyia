@@ -207,7 +207,7 @@
                             android:layout_height="match_parent"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
-                            android:text="Recommended for 16+"
+                            android:text="Recommended for 12+"
                             android:textSize="13sp" />
                         <!-- </LinearLayout>-->
 

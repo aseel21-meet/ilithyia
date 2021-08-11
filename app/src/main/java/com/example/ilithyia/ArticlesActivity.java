@@ -26,6 +26,7 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
     public Article[] articles;
     private String title;
     private Bundle extras;
+    private int idx;
     private ImageView imagePlayPause;
     private ImageView Meme;
     private MediaPlayer mediaPlayer;
@@ -35,18 +36,24 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_articles);
+        idx=0;
         Bundle extras = getIntent().getExtras();
         if (extras.getString("article_title").equals("Male Puberty")){
             mediaPlayer = MediaPlayer.create(this,R.raw.malepuberty);
+
+
         }
         if (extras.getString("article_title").equals("Female Puberty")){
             mediaPlayer = MediaPlayer.create(this,R.raw.femalepuberty);
+
         }
         if (extras.getString("article_title").equals("Contraceptives")){
             mediaPlayer = MediaPlayer.create(this,R.raw.contraceptives);
+
         }
         if (extras.getString("article_title").equals("consent")){
             mediaPlayer = MediaPlayer.create(this,R.raw.consent);
+
         }
 
         imagePlayPause = findViewById(R.id.imagePlayPause);
@@ -231,6 +238,7 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[0].getText());
             Meme.setImageResource(R.mipmap.male_puberty_img_foreground);
+            idx=0;
         }
         if (extras.getString("article_title").equals("Female Puberty")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
@@ -238,6 +246,7 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[1].getText());
             Meme.setImageResource(R.mipmap.female_puberty_img_foreground);
+            idx=1;
         }
         if (extras.getString("article_title").equals("Contraceptives")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
@@ -245,12 +254,15 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[2].getText());
             Meme.setImageResource(R.mipmap.contraceptives_img_foreground);
+            idx=2;
+
         }
         if (extras.getString("article_title").equals("consent")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
             tTextView.setText(articles[3].getTitle());
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[3].getText());
+            idx=3;
 
         }
         if (extras.getString("article_title").equals("STD vs. STI")){
@@ -259,7 +271,7 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[4].getText());
             Meme.setImageResource(R.mipmap.std_meme_foreground);
-
+            idx=4;
         }
         if (extras.getString("article_title").equals("PMS")){
             final TextView tTextView = (TextView) findViewById(R.id.Article_title);
@@ -267,6 +279,7 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
             final TextView cTextView = (TextView) findViewById(R.id.Article_content);
             cTextView.setText(articles[5].getText());
             Meme.setImageResource(R.mipmap.pms_meme_foreground);
+            idx=5;
         }
 
 
@@ -339,7 +352,7 @@ public class ArticlesActivity extends AppCompatActivity implements View.OnClickL
         stav3.setEnabled(false);
         stav4.setEnabled(false);
         stav5.setEnabled(false);
-        title=extras.getString("article_title")+"";
+        title=articles[idx].getTitle();
         Rating rate=new Rating(title,score);
         root.push().setValue(rate);
 
