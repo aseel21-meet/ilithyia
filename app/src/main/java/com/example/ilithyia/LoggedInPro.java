@@ -47,6 +47,7 @@ public class LoggedInPro extends AppCompatActivity implements View.OnClickListen
     private MessageArrayAdapter arrayAdapter;
     private User userprofile;
     private boolean isPro;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

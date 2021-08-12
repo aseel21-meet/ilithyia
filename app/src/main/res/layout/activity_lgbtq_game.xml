@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -16,6 +17,16 @@
             android:layout_gravity="center"
             android:textSize="40sp"
             android:text="sexual orientation"/>
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:text="Match the number of the flag to the right sexual orientation"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,6 +50,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/lgbtq1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -63,6 +75,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"/>
                 <TextView
+                    android:id="@+id/bisexual2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
@@ -99,6 +112,7 @@
                     android:layout_weight="1"/>
 
                 <TextView
+                    android:id="@+id/nonbinary3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3"
@@ -125,6 +139,7 @@
                         android:layout_margin="10dp"
                         android:layout_weight="1"/>
                     <TextView
+                        android:id="@+id/pansexual4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4"
@@ -157,6 +172,7 @@
                     android:layout_weight="1"/>
 
                 <TextView
+                    android:id="@+id/lesbian5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="5"
@@ -181,6 +197,7 @@
                         android:layout_margin="10dp"
                         android:layout_weight="1"/>
                     <TextView
+                        android:id="@+id/genderqueer6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6"
@@ -213,6 +230,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"/>
                 <TextView
+                    android:id="@+id/trans7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="7"
@@ -238,6 +256,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"/>
                 <TextView
+                        android:id="@+id/asexual8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="8"
@@ -255,7 +274,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
 
         <EditText
             android:id="@+id/asexualEdit"
@@ -264,6 +284,7 @@
             android:layout_margin="3dp"
             android:background="@drawable/button1" />
         <TextView
+            android:id="@+id/asexualEditT"
             android:layout_margin="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -279,6 +300,7 @@
             android:background="@drawable/button1"
             android:id="@+id/genderQueerEdit" />
         <TextView
+            android:id="@+id/genderQueerEditT"
             android:layout_margin="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -287,7 +309,136 @@
             android:text="GenderQueer"/>
 
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
 
+            <EditText
+                android:id="@+id/bisexualEdit"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/button1" />
+            <TextView
+                android:id="@+id/bisexualEditT"
+                android:layout_margin="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_gravity="center"
+                android:text="Bisexual"/>
+
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button1"
+                android:id="@+id/pansexualEdit" />
+            <TextView
+                android:id="@+id/pansexualEditT"
+                android:layout_margin="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_gravity="center"
+                android:text="Pansexual"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+
+            <EditText
+                android:id="@+id/transgenderEdit"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/button1" />
+            <TextView
+                android:id="@+id/transgenderEditT"
+                android:layout_margin="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_gravity="center"
+                android:text="Transgender"/>
+
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button1"
+                android:id="@+id/lesbianEdit" />
+            <TextView
+                android:id="@+id/lesbianEditT"
+                android:layout_margin="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_gravity="center"
+                android:text="Lesbian"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+
+            <EditText
+                android:id="@+id/nonBinaryEdit"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/button1" />
+            <TextView
+                android:id="@+id/nonBinaryEditT"
+                android:layout_margin="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_gravity="center"
+                android:text="Non-binary"/>
+
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button1"
+                android:id="@+id/lgbtqEdit" />
+            <TextView
+                android:id="@+id/lgbtqEditT"
+                android:layout_margin="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="LGBTQ+"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="30sp"
+            android:textColor="@color/textColor"
+            android:text="Submit"/>
 
     </LinearLayout>
 
