@@ -47,6 +47,7 @@ public class LoggedInPro extends AppCompatActivity implements View.OnClickListen
     private MessageArrayAdapter arrayAdapter;
     private User userprofile;
     private boolean isPro;
+    public static int TOTAL_SCORE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,7 @@ public class LoggedInPro extends AppCompatActivity implements View.OnClickListen
                 if(userprofile!=null)
                 {
                     scoresofar.setText(userprofile.getScore()+"");
+                    TOTAL_SCORE=userprofile.getScore();
                     isPro=userprofile.getIsPro();
                    //String thing= userref.child(userID).child("score").getValue()+"";
 

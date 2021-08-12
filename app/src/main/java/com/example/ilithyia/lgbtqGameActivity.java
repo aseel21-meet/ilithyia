@@ -138,11 +138,13 @@ public class lgbtqGameActivity extends AppCompatActivity implements View.OnClick
         trans7.setText("Transgender flag");
         asexual8.setText("Asexual flag");
         submit.setEnabled(false);
-        instructions.setText("Score is "+score);
+
         user = FirebaseAuth.getInstance().getCurrentUser();
         userref= FirebaseDatabase.getInstance("https://ilithy-64c52-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Users");
         userID=user.getUid();
-
+        LoggedInPro.TOTAL_SCORE=LoggedInPro.TOTAL_SCORE+score;
+        userref.child(userID).child("score").setValue(LoggedInPro.TOTAL_SCORE);
+        instructions.setText("Score is "+score);
 
 
     }//onclick

@@ -14,6 +14,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,7 +30,9 @@ public class Consent extends AppCompatActivity implements View.OnClickListener{
     private ImageView pic;
     private final Random rand=new Random();
     private boolean isYes;
-
+    private DatabaseReference userref;
+    private FirebaseUser user;
+    private String userID;
 
 
     @Override
@@ -71,6 +78,12 @@ public class Consent extends AppCompatActivity implements View.OnClickListener{
             pic.setImageResource(R.mipmap.swan_coins_round);
             nobtn.setText("");
             yesbtn.setText("you gained a score of "+score);
+            user = FirebaseAuth.getInstance().getCurrentUser();
+            userref= FirebaseDatabase.getInstance("https://ilithy-64c52-default-rtdb.europe-west1.firebasedatabase.app/").getReference("Users");
+            userID=user.getUid();
+            LoggedInPro.TOTAL_SCORE=LoggedInPro.TOTAL_SCORE+score;
+            userref.child(userID).child("score").setValue(LoggedInPro.TOTAL_SCORE);
+
         }
         else{
             senerio();
