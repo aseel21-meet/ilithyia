@@ -38,22 +38,27 @@ public class LoggedInPro extends AppCompatActivity implements View.OnClickListen
     private ListView listView ;
     private  ArrayList<Message> arrayList;
     private DatabaseReference dbref, userref;
-    private TextView title;
+    private TextView title,scoresofar, qtitle;
     private FirebaseUser user;
     private String userID;
     private DatabaseReference reference,logged;
     private FirebaseAuth mAuth;
     private Message selectedFromList;
     private MessageArrayAdapter arrayAdapter;
+    private User userprofile;
+    private boolean isPro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in_pro);
         listView = findViewById(R.id.lst);
         title=findViewById(R.id.title);
+        scoresofar=findViewById(R.id.scoresofar);
         arrayList=new ArrayList<>();
+        isPro=false;
         //Bundle extras=getIntent().getExtras();
         //title.setText(extras.getString("email"));
+        qtitle=findViewById(R.id.qtitle);
 
 
 
@@ -65,10 +70,18 @@ public class LoggedInPro extends AppCompatActivity implements View.OnClickListen
         userref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                User userprofile=snapshot.getValue(User.class);
+                userprofile=snapshot.getValue(User.class);
                 if (user != null)
                 {
                     title.setText(user.getEmail());
+                    //isPro=userprofile.getIsPro()+"";
+                }
+                if(userprofile!=null)
+                {
+                    scoresofar.setText(userprofile.getScore()+"");
+                    isPro=userprofile.getIsPro();
+                   //String thing= userref.child(userID).child("score").getValue()+"";
+
                 }
             }
 
@@ -81,60 +94,47 @@ public class LoggedInPro extends AppCompatActivity implements View.OnClickListen
 
 
         //list of msgs
+        if(isPro==true) {
+            qtitle.setVisibility(View.VISIBLE);
+            dbref = FirebaseDatabase.getInstance("https://ilithy-64c52-default-rtdb.europe-west1.firebasedatabase.app/").getReference("message");
+            dbref.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot data : snapshot.getChildren()) {
+                        Message message = data.getValue(Message.class);
+                        String id = data.getKey() + "";
+                        message.setKey(id);
 
-        dbref=FirebaseDatabase.getInstance("https://ilithy-64c52-default-rtdb.europe-west1.firebasedatabase.app/").getReference("message");
-        dbref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot data:snapshot.getChildren()){
-                    Message message = data.getValue(Message.class);
-                    String id=data.getKey()+"";
-                    message.setKey(id);
+                        if (user.getEmail().equals(message.getSendTo()) && (message.getIsPublished() == false)) {
 
-                    if(user.getEmail().equals(message.getSendTo()) && (message.getIsPublished()==false))
-                    {
+                            arrayList.add(message);
+                        }
 
-                        arrayList.add(message);
                     }
+                    arrayAdapter = new MessageArrayAdapter(LoggedInPro.this, R.layout.list_item, arrayList);
+                    listView.setAdapter(arrayAdapter);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
                 }
-                arrayAdapter = new MessageArrayAdapter(LoggedInPro.this,R.layout.list_item,arrayList);
-                listView.setAdapter(arrayAdapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selectedFromList = (Message) (listView.getItemAtPosition(position));
-                arrayAdapter.remove(selectedFromList);
-                selectedFromList.setIsPublished(true);
-                dbref.child(selectedFromList.getKey()).setValue(selectedFromList);
-                Intent intent=new Intent(LoggedInPro.this , AnswerPopUp.class);
-                intent.putExtra("m", selectedFromList);
-                startActivity(intent);
+            });
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    selectedFromList = (Message) (listView.getItemAtPosition(position));
+                    arrayAdapter.remove(selectedFromList);
+                    selectedFromList.setIsPublished(true);
+                    dbref.child(selectedFromList.getKey()).setValue(selectedFromList);
+                    Intent intent = new Intent(LoggedInPro.this, AnswerPopUp.class);
+                    intent.putExtra("m", selectedFromList);
+                    startActivity(intent);
 
 
-
-
-
-
-
-            }
-        });
-
-
-
-
-
-
-
-
-
+                }
+            });
+        }
 
     }
     //nav functioning

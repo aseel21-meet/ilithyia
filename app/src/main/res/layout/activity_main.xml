@@ -124,6 +124,43 @@
 
                     </androidx.cardview.widget.CardView>
 
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card14"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="5dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        card_view:cardBackgroundColor="@color/pinkI"
+                        card_view:cardCornerRadius="20dp">
+
+
+                        <TextView
+                            android:id="@+id/card14title"
+                            android:text="Sexual Orientations"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/kaushan_script"
+                            android:gravity="center"
+                            android:textColor="@color/gray"
+                            android:textSize="23sp" />
+
+                        <TextView
+                            android:layout_margin="5dp"
+                            android:id="@+id/age14text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|center"
+                            android:textColor="@color/gray"
+                            android:text="Recommended for 12+"
+                            android:textSize="13sp" />
+                        <!-- </LinearLayout>-->
+
+
+                    </androidx.cardview.widget.CardView>
+
 
                 </LinearLayout>
             </HorizontalScrollView>

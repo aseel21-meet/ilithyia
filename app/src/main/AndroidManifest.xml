@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/applogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ilithyia">
-        <activity android:name=".Consent"></activity>
+        <activity android:name=".lgbtqGameActivity"></activity>
+        <activity android:name=".Consent" />
         <activity android:name=".sex101GameActivity" />
         <activity android:name=".AnswerPopUp" />
         <activity android:name=".SignUpActivity" />

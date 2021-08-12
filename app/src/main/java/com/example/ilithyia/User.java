@@ -4,6 +4,7 @@ public class User {
     private String email;
     private String password;
     private boolean isPro;
+    private int score;
 
     public User()
     {
@@ -14,6 +15,7 @@ public class User {
         email=email;
         password=password;
         isPro=isPro;
+        score=0;
     }
 
     public String getEmail() {
@@ -32,11 +34,19 @@ public class User {
         this.password = password;
     }
 
-    public boolean isPro() {
+    public boolean getIsPro() {
         return isPro;
     }
 
-    public void setPro(boolean pro) {
+    public void setIsPro(boolean pro) {
         isPro = pro;
+    }
+
+   public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }
