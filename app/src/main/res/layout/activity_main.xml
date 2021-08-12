@@ -58,8 +58,14 @@
                         android:layout_marginStart="5dp"
                         android:clickable="true"
                         android:onClick="onClick"
-                        card_view:cardBackgroundColor="@color/pinkI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card1_foreground">
 
 
                         <TextView
@@ -71,18 +77,18 @@
                             android:fontFamily="@font/kaushan_script"
                             android:gravity="center"
                             android:textColor="@color/gray"
-                            android:textSize="23sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_margin="5dp"
                             android:id="@+id/age7text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 12+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                        </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -97,6 +103,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/blueI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card2_foreground">
 
 
                         <TextView
@@ -114,12 +127,13 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age16text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 12+"
                             android:textSize="13sp" />
                         <!-- </LinearLayout>-->
+                        </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -134,6 +148,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/pinkI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card3_foreground">
 
 
                         <TextView
@@ -151,12 +172,12 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age14text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 12+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                        </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -201,6 +222,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/pinkI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card4_foreground">
 
 
                         <TextView
@@ -219,8 +247,8 @@
 
                             android:id="@+id/warning8text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
                             android:gravity="center"
                             android:text="Warning: graphic content"
                             android:textColor="@color/gray"
@@ -230,12 +258,12 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age8text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 12+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                        </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -250,6 +278,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/blueI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card5_foreground">
 
 
                         <TextView
@@ -267,8 +302,7 @@
 
                             android:id="@+id/warning6text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="100dp"
+                            android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="Warning: graphic content"
                             android:textColor="@color/gray"
@@ -278,12 +312,12 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age6text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 12+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                       </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -299,6 +333,14 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/blueI"
                         card_view:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card6_foreground">
 
 
                         <TextView
@@ -317,12 +359,12 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age13text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 16+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                       </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -367,7 +409,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/blueI"
                         card_view:cardCornerRadius="20dp">
-
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card7_foreground">
 
                             <TextView
                                 android:id="@+id/card1title"
@@ -384,12 +432,12 @@
                                 android:layout_margin="5dp"
                                 android:id="@+id/age1text"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:gravity="bottom|center"
                                 android:textColor="@color/gray"
                                 android:text="Recommended for 16+"
                                 android:textSize="13sp" />
-                       <!-- </LinearLayout>-->
+                     </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -405,6 +453,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/pinkI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card1_foreground">
 
 
                         <TextView
@@ -422,12 +477,12 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age2text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 12+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                        </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -442,6 +497,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/blueI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card2_foreground">
 
 
                         <TextView
@@ -459,12 +521,11 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age3text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
-                            android:text="Recommended for 12+"
-                            android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                            android:text="Recommended for 12+"/>
+                    </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -480,6 +541,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/pinkI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card3_foreground">
 
 
                         <TextView
@@ -497,12 +565,12 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age4text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 12+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                     </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -517,6 +585,14 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/blueI"
                         card_view:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card4_foreground">
 
 
                         <TextView
@@ -534,12 +610,12 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age5text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 16+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
@@ -555,6 +631,13 @@
                         android:onClick="onClick"
                         card_view:cardBackgroundColor="@color/pinkI"
                         card_view:cardCornerRadius="20dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@mipmap/card5_foreground">
 
 
                         <TextView
@@ -572,12 +655,12 @@
                             android:layout_margin="5dp"
                             android:id="@+id/age11text"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:gravity="bottom|center"
                             android:textColor="@color/gray"
                             android:text="Recommended for 12+"
                             android:textSize="13sp" />
-                        <!-- </LinearLayout>-->
+                        </LinearLayout>
 
 
                     </androidx.cardview.widget.CardView>
